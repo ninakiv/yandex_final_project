@@ -1,0 +1,1 @@
+SELECT c."login", COUNT(o."id") AS number_of_deliveries FROM "Couriers" c JOIN "Orders" o ON c."id" = o."courierId" WHERE o."inDelivery" = TRUE GROUP BY c."login" ORDER BY number_of_deliveries DESC;
